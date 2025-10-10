@@ -699,5 +699,26 @@
         "prompt": "problem",
         "response": "solution"
     }
+  },
+  "MATH_training_split_distill_large_teacher": {
+    "hf_hub_url": "UWNSL/MATH_training_split_distill_large_teacher",
+    "columns": {
+        "prompt": "problem",
+        "response": "solution"
+    }
+  },
+  "MATH_training_split_distill_small_teacher": {
+    "hf_hub_url": "UWNSL/MATH_training_split_distill_small_teacher",
+    "columns": {
+        "prompt": "problem",
+        "response": "solution"
+    }
+  },
+  "Mix-Large_large_0.2_small_0.8": {
+    "hf_hub_url": "UWNSL/Mix-Large_large_0.2_small_0.8",
+    "columns": {
+        "prompt": "problem",
+        "response": "solution"
+    }
   }
 }

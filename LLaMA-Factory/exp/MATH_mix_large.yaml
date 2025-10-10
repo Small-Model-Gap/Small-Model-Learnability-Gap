@@ -1,0 +1,42 @@
+### model
+model_name_or_path: Qwen/Qwen2.5-3B-Instruct
+
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json
+flash_attn: fa2
+neat_packing: true
+
+### dataset
+dataset: Mix-Large_large_0.2_small_0.8
+template: qwen
+max_samples: 10000
+overwrite_cache: true
+preprocessing_num_workers: 32
+cutoff_len: 4096
+
+### output
+output_dir: saves/Qwen2.5-3B-Instruct/Mix-Large_large_0.2_small_0.8
+
+logging_steps: 1
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 5
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 2
+lr_scheduler_type: cosine
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 100
